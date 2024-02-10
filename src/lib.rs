@@ -34,7 +34,7 @@ pub fn enum_bytes(args: TokenStream, input: TokenStream) -> TokenStream {
         #input
 
         impl Into<Vec<u8>> for #name {
-            fn into(&self) -> Vec<u8> {
+            fn into(self) -> Vec<u8> {
                 match self {
                     #( #variants )*
                 }
